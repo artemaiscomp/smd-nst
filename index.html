@@ -2,55 +2,67 @@
 <html>
 
 <head>
-    <title>Neural Style Transfer : WebGL</title>
-    <meta charset="utf-8">
-    <script src="js/inflate.min.js"></script>
-    <script src="js/webdnn.js"></script>
-    <script src="js/webcam.js"></script>
-    <script src="js/script.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+	<title>Arte + Comp - Transferência Neural de Estilos</title>
+	<meta charset="utf-8">
+	<script src="js/inflate.min.js"></script>
+	<script src="js/webdnn.js"></script>
+	<script src="js/webcam.js"></script>
+	<script src="js/script.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"> <!--Bootstrap v4.4.1-->
 </head>
 
 <body>
-    <div class="Layer OutputLayer" onclick="togglePause(); return false;">
-        <canvas id="result" width="192" height="144"></canvas>
-    </div>
+	<div class="Layer OutputLayer" onclick="togglePause(); return false;">
+		<canvas id="result" width="192" height="144"></canvas>
+	</div>
 
-    <div class="Layer CameraLayer"></div>
+	<div class="Layer CameraLayer"></div>
 
-    <canvas id="snap" width="192" height="144"></canvas>
+	<canvas id="snap" width="192" height="144"></canvas>
+	
+	<div class="float-left">
+		<nav class="navbar bg-light">
+			<ul class="nav flex-column">
+				<li class="nav-item">
+					<a class="nav-link" href="javascript:initialize('./output-candy', 'CANDY');">CANDY</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="javascript:initialize('./output-composition', 'COMP');">COMP</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="javascript:initialize('./output-edtaonisl', 'EDTAONISL');">EDTAONISL</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="javascript:initialize('./output-fur_0', 'FUR');">FUR</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="javascript:initialize('./output-hokusai', 'HOKUSAI');">HOKUSAI</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="javascript:initialize('./output-hundertwasser', 'HUNDERTWASSER');">HUNDERTWASSER</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="javascript:initialize('./output-kanagawa', 'WAVE');">WAVE</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="javascript:initialize('./output-kandinsky_e2_full512', 'KANDINSKY');">KANDINSKY</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="javascript:initialize('./output-seurat', 'SEURAT');">SEURAT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="javascript:initialize('./output-seurat', 'SEURAT');">SEURAT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="javascript:initialize('./output-starrynight', 'STARRYNIGHT');">STARRYNIGHT</a>
+				</li>
+			</ul>
+		</nav>
+		<br>
 
-    <div class="menu">
-        <p style="font-size: 22px; font-weight: normal; color: #fff;">REALTIME STYLE TRANSFER</p>
-        <p style="margin-top:50px;font-size: 18px;">STYLES</p>
-
-        <a href="javascript:initialize('./output-candy', 'CANDY');">CANDY</a>
-        <hr>
-        <a href="javascript:initialize('./output-composition', 'COMP');">COMP</a>
-        <hr>
-        <a href="javascript:initialize('./output-edtaonisl', 'EDTAONISL');">EDTAONISL</a>
-        <hr>
-        <a href="javascript:initialize('./output-fur_0', 'FUR');">FUR</a>
-        <hr>
-        <a href="javascript:initialize('./output-hokusai', 'HOKUSAI');">HOKUSAI</a>
-        <hr>
-        <a href="javascript:initialize('./output-hundertwasser', 'HUNDERTWASSER');">HUNDERTWASSER</a>
-        <hr>
-        <a href="javascript:initialize('./output-kanagawa', 'WAVE');">WAVE</a>
-        <hr>
-        <a href="javascript:initialize('./output-kandinsky_e2_full512', 'KANDINSKY');">KANDINSKY</a>
-        <hr>
-        <a href="javascript:initialize('./output-seurat', 'SEURAT');">SEURAT</a>
-        <hr>
-        <a href="javascript:initialize('./output-starrynight', 'STARRYNIGHT');">STARRYNIGHT</a>
-        <hr>
-
-        <p style="margin-top:60px;font-size: 18px;">STATUS</p>
-        <div id="status" onclick="togglePause(); return false;">
-            SELECT A STYLE
-        </div>
-    </div>
-
+		<div id="status" class="alert alert-primary" role="alert" onclick="togglePause(); return false;"></div>
+		<br>
+	</div>
 </body>
 
 </html>
