@@ -18,7 +18,7 @@ function togglePause() {
     if (flagPaused) {
         setStatus('CLICK TO START');
     } else {
-        setStatus('PROCESSING ' + currentStyle);
+        setStatus('PROCESSANDO ' + currentStyle);
         mainRoutine();
     }
 }

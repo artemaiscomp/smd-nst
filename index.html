@@ -21,34 +21,40 @@
     <canvas id="snap" width="192" height="144"></canvas>
 
     <div class="menu">
-        <p style="font-size: 22px; font-weight: normal; color: #fff;">REALTIME STYLE TRANSFER</p>
-        <p style="margin-top:50px;font-size: 18px;">STYLES</p>
+       <header>
+        <p style="margin:0px;padding: 0px; font-size: 22px; font-weight: normal; color: #fff;">Arte + Computação</p>
+       </header>
+        <p style="margin-top:20px;font-size: 22px;">ESTILOS</p>
 
-        <a href="javascript:initialize('./output-candy', 'CANDY');">CANDY</a>
+        <a href="javascript:initialize('./output-candy', 'CANDY');">Candy</a>
         <hr>
         <a href="javascript:initialize('./output-composition', 'COMP');">COMP</a>
         <hr>
-        <a href="javascript:initialize('./output-edtaonisl', 'EDTAONISL');">EDTAONISL</a>
+        <a href="javascript:initialize('./output-edtaonisl', 'EDTAONISL');">Edtaonisl</a>
         <hr>
         <a href="javascript:initialize('./output-fur_0', 'FUR');">FUR</a>
         <hr>
-        <a href="javascript:initialize('./output-hokusai', 'HOKUSAI');">HOKUSAI</a>
+        <a href="javascript:initialize('./output-hokusai', 'HOKUSAI');">Hokusai</a>
         <hr>
-        <a href="javascript:initialize('./output-hundertwasser', 'HUNDERTWASSER');">HUNDERTWASSER</a>
+        <a href="javascript:initialize('./output-hundertwasser', 'HUNDERTWASSER');">Hundertwasser</a>
         <hr>
-        <a href="javascript:initialize('./output-kanagawa', 'WAVE');">WAVE</a>
+        <a href="javascript:initialize('./output-kanagawa', 'WAVE');">Wave</a>
         <hr>
-        <a href="javascript:initialize('./output-kandinsky_e2_full512', 'KANDINSKY');">KANDINSKY</a>
+        <a href="javascript:initialize('./output-kandinsky_e2_full512', 'KANDINSKY');">Kandinsky</a>
         <hr>
-        <a href="javascript:initialize('./output-seurat', 'SEURAT');">SEURAT</a>
+        <a href="javascript:initialize('./output-seurat', 'SEURAT');">Seurat</a>
         <hr>
-        <a href="javascript:initialize('./output-starrynight', 'STARRYNIGHT');">STARRYNIGHT</a>
+        <a href="javascript:initialize('./output-starrynight', 'STARRYNIGHT');">StarryNight</a>
         <hr>
 
-        <p style="margin-top:60px;font-size: 18px;">STATUS</p>
+        <p style="margin-top:15px;font-size: 22px;">SITUAÇÃO</p>
         <div id="status" onclick="togglePause(); return false;">
-            SELECT A STYLE
+          <p style="margin-top: -15px;"> Selecione um estilo</p> 
         </div>
+          <li>
+              <a>Inspirado por:</a>
+              <a href="https://github.com/garynewby/Realtime-fast-style-transfer">Realtime fast style transfer</a></li>
+        
     </div>
 
 </body>
