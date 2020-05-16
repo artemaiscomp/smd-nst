@@ -1,5 +1,7 @@
 
 body {
+    position: fixed;
+    z-index: 1;
     font-family: Arial, Helvetica, sans-serif ;
     font-weight: bold;
     margin: 0px;
@@ -31,7 +33,7 @@ a {
 }
 
 .CameraLayer {
-    z-index: 1;
+    z-index: 0;
     overflow: hidden;
 }
 
